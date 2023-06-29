@@ -1,0 +1,49 @@
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(211, 211, 211, 0.2);
+    padding: 3vh 2vw;
+    border-radius: 20px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: inset 0 0 10px 7px rgba(128, 128, 128, 0.7);
+}
+
+.tagContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tags{
+    display: flex;
+    gap: 2px;
+}
+
+.tag{
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    text-align: center;
+    margin: 0
+}
+
+.language{
+    background-color: lightgreen;
+}
+
+.technology{
+    background-color: lightblue;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+}
