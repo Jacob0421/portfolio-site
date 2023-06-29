@@ -1,7 +1,7 @@
 import React from "react";
-import "@splidejs/react-splide/css";
 import { projects } from "../../Data/Projects";
 import styles from "./Projects.module.css";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
 	return (
@@ -10,17 +10,32 @@ export default function Projects() {
 				<div className={styles.card}>
 					<div className={styles.cardHeader}>
 						<div className={styles.cardTitle}>
-							{project.ProjectName}
+							<h1>{project.ProjectName}</h1>
 						</div>
 						<div className={styles.cardDates}>
-							{project.ProjectStartDate} -{" "}
-							{project.ProjectEndDate}
+							{`${project.ProjectStartDate} -
+							${project.ProjectEndDate}`}
 						</div>
 					</div>
+					<div>
+						<a href={project.GitHubURL}>
+							View GitHub Repository <FiExternalLink />
+						</a>
+
+						{project.HostedURL !== "" ? (
+							<a href={project.HostedURL}>
+								View hosted site here
+							</a>
+						) : (
+							""
+						)}
+					</div>
 					<div className={styles.cardDescription}>
+						<strong>Description:</strong> <br />
 						{project.ProjectDescription}
 					</div>
 					<div className={styles.tagContainer}>
+						<p>languages used:</p>
 						<div className={styles.tags}>
 							{project.LanguagesUsed.map((language, index) => (
 								<p
@@ -30,6 +45,7 @@ export default function Projects() {
 								</p>
 							))}
 						</div>
+						<p>Tech used:</p>
 						<div className={styles.tags}>
 							{project.TechnologiesUsed.map(
 								(technology, index) => (
