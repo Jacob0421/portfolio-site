@@ -1,12 +1,10 @@
 import "./App.css";
-import Projects from "./Components/Projects/Projects";
+import Resume from "./Components/Resume/Resume";
 
 export default function App() {
 	return (
-		<div className="content-container">
-			<section>
-				<h1>Jacob Roberts Web Dev Portfolio</h1>
-			</section>
-		</div>
+		<section>
+			<Resume />
+		</section>
 	);
 }

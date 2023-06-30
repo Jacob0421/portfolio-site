@@ -12,27 +12,27 @@ export default function Layout() {
 	return (
 		<>
 			<nav>
-				<ul>
-					<li>
+				<ul className={styles.navList}>
+					<li className={styles.navItem}>
 						<Link to="/" className={styles.navLink}>
 							Home
 						</Link>
 					</li>
-					<li>
+					<li className={styles.navItem}>
 						<Link to="/Projects" className={styles.navLink}>
 							Projects
 						</Link>
 					</li>
 				</ul>
-				<ul>
-					<li>
+				<ul className={styles.navList}>
+					<li className={styles.navItem}>
 						<Link
 							onClick={() => window.open(emailAddress)}
 							title={emailAddress}>
 							<AiOutlineMail className={`${styles.navIcon}`} />
 						</Link>
 					</li>
-					<li>
+					<li className={styles.navItem}>
 						<Link
 							onClick={() => window.open(linkedInURL)}
 							title={linkedInURL}
@@ -44,7 +44,7 @@ export default function Layout() {
 							/>
 						</Link>
 					</li>
-					<li>
+					<li className={styles.navItem}>
 						<Link
 							onClick={() => window.open(githubURL)}
 							title={githubURL}>

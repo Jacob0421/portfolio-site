@@ -11,7 +11,7 @@ nav {
     height: 6vh;
 }
 
-ul {
+.navList {
     margin: 0 2vw;
     padding: 0;
     display: flex;
@@ -19,7 +19,7 @@ ul {
     list-style-type: none;
 }
 
-li {
+.navItem {
     height: 100%;
     display: block;
 }

@@ -1,0 +1,35 @@
+.resumeContainer{
+    width: 60%;
+    background: white;
+    padding: 5vh 4vw;
+    margin: 1vh auto;
+}
+
+.name {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.contactInfo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sectionHeader{
+    font-size: x-large;
+}
+
+.divider {
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+.positionDetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+.degreeDetails{
+    display: flex;
+    justify-content: space-between;
+}
