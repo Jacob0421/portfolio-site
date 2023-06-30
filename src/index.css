@@ -5,9 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background: url("https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg");
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 3vh 0;
 }

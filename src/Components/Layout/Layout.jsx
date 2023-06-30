@@ -1,44 +1,54 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FiExternalLink } from "react-icons/fi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { styles } from "./Layout.module.css";
+import { AiOutlineMail } from "react-icons/ai";
+import styles from "./Layout.module.css";
 
 export default function Layout() {
+	const emailAddress = "mailto:Jacob_Rob99@Outlook.com";
+	const linkedInURL = "https://www.linkedin.com/in/jacob-m-roberts/";
+	const githubURL = "https://github.com/Jacob0421";
+
 	return (
 		<>
 			<nav>
 				<ul>
 					<li>
-						<Link to="/Experience">Experience</Link>
+						<Link to="/" className={styles.navLink}>
+							Home
+						</Link>
+					</li>
+					<li>
+						<Link to="/Projects" className={styles.navLink}>
+							Projects
+						</Link>
 					</li>
 				</ul>
 				<ul>
 					<li>
 						<Link
-							onClick={() =>
-								window.open(
-									"https://www.linkedin.com/in/jacob-m-roberts/"
-								)
-							}>
+							onClick={() => window.open(emailAddress)}
+							title={emailAddress}>
+							<AiOutlineMail className={`${styles.navIcon}`} />
+						</Link>
+					</li>
+					<li>
+						<Link
+							onClick={() => window.open(linkedInURL)}
+							title={linkedInURL}
+							className={`${styles.navIcon}`}>
 							<FaLinkedin
 								style={{
 									color: "0E76A8",
-									fontSize: "30px",
-									margin: "0",
 								}}
 							/>
 						</Link>
+					</li>
+					<li>
 						<Link
-							onClick={() =>
-								window.open("https://github.com/Jacob0421")
-							}>
-							<FaGithub
-								style={{
-									fontSize: "30px",
-									margin: "0",
-								}}
-							/>
+							onClick={() => window.open(githubURL)}
+							title={githubURL}>
+							<FaGithub className={`${styles.navIcon}`} />
 						</Link>
 					</li>
 				</ul>
